@@ -13,7 +13,7 @@ export default [
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
-        ...globals.node, // ✅ Add Node.js globals here
+        ...globals.node, 
       },
       parserOptions: {
         ecmaVersion: 'latest',
@@ -38,8 +38,8 @@ export default [
   {
     files: ['tailwind.config.js'],
     languageOptions: {
-      globals: globals.node, // ✅ specifically for Node-style files
-      sourceType: 'script',  // ✅ because CommonJS doesn't use `import/export`
+      globals: globals.node, 
+      sourceType: 'script', 
     },
   },
 ]

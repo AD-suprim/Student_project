@@ -37,7 +37,6 @@ function StudentForm({ existingStudent = null, onStudentAdded }) {
     setErrorMessage(null);
     setIsLoading(true);
 
-    // Validation (same as before)
     if (!name.trim()) {
       setErrorMessage('Name is required');
       setIsLoading(false);
@@ -69,7 +68,6 @@ function StudentForm({ existingStudent = null, onStudentAdded }) {
       return;
     }
     if (stuPassword.trim().length < 6 && !isEditMode) {
-      // For edit mode, maybe password is optional? Adjust logic as you want.
       setErrorMessage('Password must be at least 6 characters');
       setIsLoading(false);
       setTimeout(() => setErrorMessage(null), 5000);

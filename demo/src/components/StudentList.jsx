@@ -65,7 +65,7 @@ function StudentList({ onSelectStudent, selectedStudentId, StudentDetailsCompone
       onSelectStudent(null);
     } else {
       onSelectStudent(studentId);
-      // CHANGED: Scroll to center the selected student
+    
       setTimeout(() => {
         const studentElement = studentRefs.current[studentId];
         if (studentElement) {
@@ -187,7 +187,7 @@ function StudentList({ onSelectStudent, selectedStudentId, StudentDetailsCompone
                 </div>
               </li>
               
-              {/* CHANGED: Positioned details in separate column aligned with selected student */}
+        
               {selectedStudentId === student.studentId && StudentDetailsComponent && (
                 <div 
                   className="absolute left-full ml-8 top-0 w-96 bg-white rounded-xl shadow-lg border border-gray-200 p-6 z-10"

@@ -12,7 +12,6 @@ function Home() {
         Select a student from the list to view their details.
       </p>
 
-      {/* CHANGED: Back to grid layout but with dynamic positioning */}
       <div className="grid grid-cols-2 gap-8">
         <StudentList 
           onSelectStudent={setSelectedStudentId} 
@@ -20,7 +19,9 @@ function Home() {
           StudentDetailsComponent={StudentDetails}
         />
         <div>
-          {/* Details column - will be positioned dynamically */}
+          {selectedStudentId && (
+            <StudentDetails studentId={selectedStudentId} />
+          )}
         </div>
       </div>
     </div>

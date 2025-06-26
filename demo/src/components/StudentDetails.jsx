@@ -88,13 +88,6 @@ function StudentDetails({ studentId }) {
           <span className="text-gray-800 text-sm col-span-2">{student.phoneNumber}</span>
         </div>
       </div>
-      
-      {/* Footer badge */}
-      <div className="mt-4 pt-3 border-t border-gray-100">
-        <span className="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-          Active Student
-        </span>
-      </div>
     </div>
   );
 }

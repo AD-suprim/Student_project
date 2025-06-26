@@ -7,7 +7,6 @@ function AddStudent() {
   const existingStudent = location.state?.student || null;
 
   const handleStudentAdded = () => {
-    // ✅ CHANGED: Navigate with success message
     navigate('/', { 
       state: { 
         successMessage: existingStudent 

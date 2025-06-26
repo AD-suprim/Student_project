@@ -13,16 +13,12 @@ export const getAllStudents = async () => {
   return handleResponse(response);
 };
 
-// export const getStudentById = async (studentId) => { // ✅ Renamed from id → studentId
-//   const response = await fetch(`${BASE_URL}/${studentId}`); // ✅ Uses studentId in path
-//   return handleResponse(response);
-// };
 export const getStudentById = async (studentId) => {
   const response = await fetch(`${BASE_URL}/${studentId}`);
   const result = await response.json();
 
   if (response.ok) {
-    return result.data; // ✅ Access the nested data
+    return result.data; 
   } else {
     throw new Error(result.message || "Failed to fetch student details");
   }
@@ -38,7 +34,7 @@ export const addStudent = async (student) => {
   return handleResponse(response);
 };
 
-export const deleteStudent = async (studentId) => { // ✅ Ensure delete uses studentId
+export const deleteStudent = async (studentId) => { 
   const response = await fetch(`${BASE_URL}/${studentId}`, {
     method: 'DELETE',
   });
