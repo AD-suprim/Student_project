@@ -1,1 +1,1 @@
-hello
+This is a student management project created by using various technologies i.e java,react,MySql,html,css,js and can be used to perform CRUD OPERATIONS(add the student details,update the existig student data, viewing student data and deleting the student).
