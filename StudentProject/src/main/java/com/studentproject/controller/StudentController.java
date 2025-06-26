@@ -33,7 +33,7 @@ public class StudentController {
         try {
             Long studentId = studentDTO.getStudentId();
             if (studentId == null) {
-                // 🔁 Still using ResponseBuilder, now wrapped with 400 Bad Request
+                //  Still using ResponseBuilder, now wrapped with 400 Bad Request
                 return ResponseEntity
                         .status(HttpStatus.BAD_REQUEST)
                         .body(ResponseBuilder.buildObjectResponse(null, ResponseType.ERROR, "Student ID is required"));
@@ -41,24 +41,24 @@ public class StudentController {
 
             boolean studentIdExist = studentService.studentIdExist(studentId);
             if (!studentIdExist) {
-                // 🔁 Student created successfully — 201 Created
+                //  Student created successfully — 201 Created
                 return ResponseEntity
                         .status(HttpStatus.CREATED)
                         .body(ResponseBuilder.buildObjectResponse(studentService.createStudent(studentDTO), ResponseType.SUCCESS, "Student created successfully"));
             } else {
-                // 🔁 Student already exists — 409 Conflict
+                //  Student already exists — 409 Conflict
                 return ResponseEntity
                         .status(HttpStatus.CONFLICT)
                         .body(ResponseBuilder.buildObjectResponse(null, ResponseType.ERROR, "Student already exists"));
             }
         } catch (IllegalArgumentException e) {
-            // 🔁 Validation or format error — 400 Bad Request
+            //  Validation or format error — 400 Bad Request
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
                     .body(ResponseBuilder.buildObjectResponse(null, ResponseType.ERROR, "Invalid student data"));
         } catch (Exception e) {
             e.printStackTrace();
-            // 🔁 Something unexpected — 500 Internal Server Error
+            //  Something unexpected — 500 Internal Server Error
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(ResponseBuilder.buildObjectResponse(null, ResponseType.ERROR, e.getMessage()));

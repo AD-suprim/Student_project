@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@Configuration //“This class contains methods that define beans — please process them during application startup.”
+@Configuration //This class contains methods that define beans — please process them during application startup.
 public class PasswordConfig {
 
     @Bean

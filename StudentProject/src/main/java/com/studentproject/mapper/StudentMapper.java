@@ -15,14 +15,10 @@ public interface StudentMapper extends CommonMapper<Student, StudentDTO> {
 
     @Named("toDTO")
     StudentDTO toDTO(Student student);
-//    @Mappings({
-//            @Mapping(source = "id", target = "studentId") // ✅ UPDATED: map entity's 'id' to DTO's 'studentId'
-//    })
+
 
     Student fromDTO(StudentDTO studentDTO);
-//    @mappings({
-//            @Mapping(source = "studentId", target = "id") // ✅ UPDATED: map DTO's 'studentId' to entity's 'id'
-//    })
+
 
 
     @IterableMapping(qualifiedByName = "toDTO")
