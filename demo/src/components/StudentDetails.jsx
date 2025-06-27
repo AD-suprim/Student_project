@@ -65,29 +65,6 @@ function StudentDetails({ studentId }) {
           <p className="text-sm text-gray-500">Student Details</p>
         </div>
       </div>
-      
-      {/* Details grid */}
-      <div className="space-y-3">
-        <div className="grid grid-cols-3 gap-2 items-center">
-          <span className="text-gray-500 font-medium text-sm">Age:</span>
-          <span className="text-gray-800 text-sm col-span-2">{student.age}</span>
-        </div>
-        
-        <div className="grid grid-cols-3 gap-2 items-start">
-          <span className="text-gray-500 font-medium text-sm">Email:</span>
-          <span className="text-gray-800 text-sm col-span-2 break-all">{student.email}</span>
-        </div>
-        
-        <div className="grid grid-cols-3 gap-2 items-center">
-          <span className="text-gray-500 font-medium text-sm">ID:</span>
-          <span className="text-gray-800 text-sm col-span-2">{student.studentId}</span>
-        </div>
-        
-        <div className="grid grid-cols-3 gap-2 items-center">
-          <span className="text-gray-500 font-medium text-sm">Phone:</span>
-          <span className="text-gray-800 text-sm col-span-2">{student.phoneNumber}</span>
-        </div>
-      </div>
     </div>
   );
 }
